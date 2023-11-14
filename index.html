@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Nike LP/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap/min.js"></script>
+    <title>Nike</title>
+</head>
+<body>
+    <div class="overlay">
+        <p><i>Nike</i></p>
+    </div>
+    <header class="header">
+        <div class="logo">
+            <img src="/Nike LP/img/logo.png" alt="">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Feminino</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            <i class="fa-solid fa-bars" id="toggle"></i>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="content-bx">
+            <h3>Just do it.</h3>
+            <h2>Nike Air Zoom 38</h2>
+            <p class="detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Veniam tenetur soluta adipisci explicabo vitae dolores maxime repellat, iusto, 
+                assumenda repellendus corrupti natus corporis architecto reiciendis exercitationem? 
+                Esse accusantium amet sequi?</p>
+                <button>Saiba mais</button>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+        </div>
+        <div class="img-bx">
+            <img src="/Nike LP/img/nike1.png" alt="" srcset="">
+        </div>
+    </section>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const menu = document.querySelector('.menu');
+
+        toggle.onclick = function(){
+            menu.ClassList.toggle('active');
+        }
+
+        gsap.from('.header', 1.2, {opacity: 0, y:-100, delay:0.1})
+        gsap.from('h3', 1.2, {opacity: 0, x:-400, delay:0.3})
+        gsap.from('h2', 1.2, {opacity: 0, x:-400, delay:0.8})
+        gsap.from('.detail', 1.2, {opacity: 0, x:-400, delay:1.3})
+        gsap.from('button', 1.2, {opacity: 0, x:-400, delay:1.5})
+        gsap.from('.img-bx', 1.2, {opacity: 0, x:-300, delay:0.8})
+        gsap.from('.social-icons', 1.2, {opacity: 0, y:-100, delay:0.2})
+    </script>
+</body>
+</html>
